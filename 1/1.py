@@ -6,4 +6,4 @@ right = [int(n[1]) for n in input]
 left.sort()
 right.sort()
 distance = sum([abs(x - y) for x, y in zip(left, right)])
-a = zip(left, right)
+print(distance) # solution: 2086478 
