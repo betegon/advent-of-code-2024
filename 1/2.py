@@ -7,4 +7,4 @@ similarity = 0
 for idx, n in enumerate(left):
     similarity += right.count(n)*n
 
-print(similarity)
+print(similarity) # solution: 24941624
