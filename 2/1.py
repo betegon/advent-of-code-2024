@@ -43,4 +43,4 @@ def check_levels_difference(report, max_diff=3):
 if __name__ == "__main__":
     reports = read_input()
     reports_safe = get_safe_reports(reports)
-    print(len(reports_safe))
+    print(len(reports_safe)) # solution: 549
