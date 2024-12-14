@@ -26,39 +26,6 @@ Complejidad total en espacio:
  O(k) + O(n) + O(m) = O(n + m) 
 """
 
-"""
-TypeScript equivalent:
-
-interface InputLine {
-  left: number;
-  right: number;
-}
-
-function readInput(): InputLine[] {
-  // Implementation would depend on input source
-  return [];
-}
-
-function calculateSimilarity(input: InputLine[]): number {
-  const left = input.map(line => line.left);
-  const right = input.map(line => line.right);
-  
-  // Create frequency counter for right array
-  const rightCounts = new Map<number, number>();
-  right.forEach(num => {
-    rightCounts.set(num, (rightCounts.get(num) || 0) + 1);
-  });
-
-  // Calculate similarity
-  return left.reduce((sum, num) => 
-    sum + num * (rightCounts.get(num) || 0), 0);
-}
-
-// Usage:
-const input = readInput();
-const similarity = calculateSimilarity(input);
-console.log(similarity); // 24941624
-
 /*
 Time Complexity:
 • Building Map for right array: O(n)
