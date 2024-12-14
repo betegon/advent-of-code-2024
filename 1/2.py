@@ -25,20 +25,3 @@ Complejidad espacio:
 Complejidad total en espacio:
  O(k) + O(n) + O(m) = O(n + m) 
 """
-
-/*
-Time Complexity:
-• Building Map for right array: O(n)
-• Iterating left array for similarity: O(m) 
-• Total: O(n + m) = O(n)
-
-Space Complexity:
-1. Space for Map:
-  • Map stores unique numbers from right with frequencies
-  • If k unique numbers in right, Map size is O(k), where k ≤ m
-2. Space for other variables:
-  • left and right arrays from input take O(n) and O(m)
-  • No additional significant data structures created
-Total space complexity: O(k + n + m) = O(n + m)
-*/
-"""
