@@ -25,3 +25,53 @@ Complejidad espacio:
 Complejidad total en espacio:
  O(k) + O(n) + O(m) = O(n + m) 
 """
+
+"""
+TypeScript equivalent:
+
+interface InputLine {
+  left: number;
+  right: number;
+}
+
+function readInput(): InputLine[] {
+  // Implementation would depend on input source
+  return [];
+}
+
+function calculateSimilarity(input: InputLine[]): number {
+  const left = input.map(line => line.left);
+  const right = input.map(line => line.right);
+  
+  // Create frequency counter for right array
+  const rightCounts = new Map<number, number>();
+  right.forEach(num => {
+    rightCounts.set(num, (rightCounts.get(num) || 0) + 1);
+  });
+
+  // Calculate similarity
+  return left.reduce((sum, num) => 
+    sum + num * (rightCounts.get(num) || 0), 0);
+}
+
+// Usage:
+const input = readInput();
+const similarity = calculateSimilarity(input);
+console.log(similarity); // 24941624
+
+/*
+Time Complexity:
+• Building Map for right array: O(n)
+• Iterating left array for similarity: O(m) 
+• Total: O(n + m) = O(n)
+
+Space Complexity:
+1. Space for Map:
+  • Map stores unique numbers from right with frequencies
+  • If k unique numbers in right, Map size is O(k), where k ≤ m
+2. Space for other variables:
+  • left and right arrays from input take O(n) and O(m)
+  • No additional significant data structures created
+Total space complexity: O(k + n + m) = O(n + m)
+*/
+"""
