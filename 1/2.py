@@ -15,7 +15,6 @@ Complejidad tiempo:
 •	Total: O(n + m) = o (n).
 
 
-
 Complejidad espacio:
 1. Espacio para Counter(right):
   •	El diccionario creado por Counter almacena cada número único de right junto con su frecuencia.
