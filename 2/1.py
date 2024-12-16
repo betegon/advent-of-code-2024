@@ -44,5 +44,3 @@ if __name__ == "__main__":
     reports = read_input()
     reports_safe = get_safe_reports(reports)
     print(len(reports_safe)) # solution: 549
-
-    
