@@ -30,6 +30,7 @@ def is_report_increasing_or_decreasing(report):
             is_decreasing = False
         if report[i] > report[i+1]:
             is_increasing = False
+    return is_increasing or is_decreasing
 
 def check_levels_difference(report, max_diff=3):
     for i in range(len(report)-1):
